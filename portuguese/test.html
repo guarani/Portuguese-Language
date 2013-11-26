@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<style>
+			.correct {
+				color: green;
+			}
+			.incorrect {
+				color: red;
+			}
+		</style>
+		<script>
+			function check() {
+				if ((document.getElementById("question-1").value.toLowerCase() == "molharei".toLowerCase()) 		&&
+					 (document.getElementById("question-2").value.toLowerCase() == "molhara".toLowerCase()) 		&&
+				    (document.getElementById("question-3").value.toLowerCase() == "molhara".toLowerCase())	 	&&
+				    (document.getElementById("question-4").value.toLowerCase() == "molharemos".toLowerCase()) 	&&
+				 	 (document.getElementById("question-5").value.toLowerCase() == "molharao".toLowerCase())		&&
+					 (document.getElementById("question-6").value.toLowerCase() == "molharao".toLowerCase())) {
+					document.getElementById("result").innerHTML = "Correto!";
+					document.getElementById("result").classList.remove("incorrect"); 
+					document.getElementById("result").classList.add("correct"); 
+				}
+				else 
+				{
+					document.getElementById("result").innerHTML = "Incorreto! :(";
+					document.getElementById("result").classList.remove("correct"); 
+					document.getElementById("result").classList.add("incorrect"); 
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>FUTURO DE PRESENTE</h1>
+		<h3>Verbo: Molhar</h3>
+		<table>
+			<tr>
+				<td>Eu</td><td><input id="question-1" type="text"></input></td>
+			</tr>
+			<tr>
+				<td>Você</td><td><input	id="question-2" type="text"></input></td>
+			</tr>
+			<tr>
+				<td>Ele/ela</td><td><input	id="question-3" type="text"></input></td>
+			</tr>
+			<tr>
+				<td>Nós</td><td><input id="question-4" type="text"></input></td>
+			</tr>
+			<tr>
+				<td>Vocês</td><td><input id="question-5" type="text"></input></td>
+			</tr>
+			<tr>
+				<td>Eles/elas</td><td><input id="question-6" type="text"></input></td>
+			</tr>
+		</table>
+		<button id="check" onclick="check()">Verificar</button>
+		<p id="result"></p>
+	</body>
+<html>
+
